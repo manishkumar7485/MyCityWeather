@@ -75,7 +75,7 @@ export const getWeatherDataByCoordinates = async (lat, lon) => {
         alerts: "yes",
       },
     });
-    console.log(data);
+    // console.log(data);
     return formatWeatherData(data);
   } catch (error) {
     handleError(error);
