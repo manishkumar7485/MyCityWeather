@@ -54,7 +54,7 @@ export const getWeatherData = async (city) => {
         alerts: "yes",
       },
     });
-
+    console.log("API DATA ",data);
     return formatWeatherData(data);
   } catch (error) {
     handleError(error);

@@ -11,7 +11,7 @@ export default function WeatherBackground() {
     document.body.style.backgroundImage = `
       linear-gradient(
         135deg,
-        rgba(79,142,247,0.95),
+        rgba(41, 45, 53, 0.95),
         rgba(35,60,120,0.95)
       )
     `;

@@ -8,13 +8,16 @@ align-items:center;
 
 min-height:240px;
 
+font-weight: 900;
+
+
 }
 
 .weather-left h1{
 
 font-size:70px;
 
-margin:10px 0;
+margin:20px 40px;
 
 font-weight:700;
 
@@ -29,7 +32,7 @@ font-size:28px;
 .weather-left span{
 
 font-size:18px;
-
+margin-top: 10px ;
 color:var(--text-light);
 
 }
