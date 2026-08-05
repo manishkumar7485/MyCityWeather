@@ -14,7 +14,7 @@ export default function NotFound() {
 
         <p>Page Not Found</p>
 
-        <Link to="/">Go Home</Link>
+        <Link to="/MyCityWeather">Go Home</Link>
       </div>
     </div>
   );
