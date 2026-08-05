@@ -1,22 +1,26 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 
 import { WeatherProvider } from "./context/WeatherContext";
 import { ThemeProvider } from "./context/ThemeContext";
-
+import { HashRouter } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  // <BrowserRouter>
+  <React.StrictMode>
     <ThemeProvider>
-      <WeatherProvider>
-        <App />
-      </WeatherProvider>
+      <HashRouter>
+        <WeatherProvider>
+          <App />
+        </WeatherProvider>
+      </HashRouter>
     </ThemeProvider>
-  </BrowserRouter>
+  </React.StrictMode>
+  // </BrowserRouter>
 );
