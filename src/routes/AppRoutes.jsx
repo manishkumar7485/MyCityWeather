@@ -7,7 +7,7 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/weather/:city" element={<Home />} />
+      <Route path="/MyCityWeather/:city" element={<Home />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
