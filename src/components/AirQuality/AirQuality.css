@@ -1,0 +1,30 @@
+.aq-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:20px;
+}
+
+.aq-item{
+text-align:center;
+padding:18px;
+border-radius:18px;
+background:rgba(255,255,255,.08);
+}
+
+.aq-item svg{
+font-size:28px;
+color:var(--primary);
+margin-bottom:12px;
+}
+
+.aq-item h4{
+font-size:22px;
+margin-bottom:6px;
+}
+
+@media(max-width:480px){
+.aq-grid{
+grid-template-columns:1fr;
+}
+}

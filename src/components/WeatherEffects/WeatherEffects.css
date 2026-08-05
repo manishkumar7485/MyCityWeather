@@ -1,0 +1,177 @@
+.rain,.snow,.stars,.clouds,.fog,.sun-rays,.lightning{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+/* Sun */
+.sun-rays{
+background:radial-gradient(circle at center,
+rgba(255,230,120,.45),
+transparent 70%);
+animation:rotateSun 40s linear infinite;
+}
+
+@keyframes rotateSun{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+/* Stars */
+.stars span{
+position:absolute;
+background:#fff;
+border-radius:50%;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.2;}
+50%{opacity:1;}
+}
+
+/* Rain */
+.rain span{
+position:absolute;
+width:2px;
+height:24px;
+background:rgba(255,255,255,.7);
+transform:rotate(20deg);
+animation:rain linear infinite;
+}
+
+@keyframes rain{
+0%{transform:translateY(-120vh) translateX(0) rotate(20deg);}
+100%{transform:translateY(120vh) translateX(-120px) rotate(20deg);}
+}
+
+/* Snow */
+.snow span{
+position:absolute;
+background:white;
+border-radius:50%;
+animation:snow linear infinite;
+opacity:.9;
+}
+
+@keyframes snow{
+0%{
+transform:translateY(-10vh) translateX(0) rotate(0);
+}
+100%{
+transform:translateY(110vh) translateX(80px) rotate(360deg);
+}
+}
+
+/* Clouds */
+.cloud{
+position:absolute;
+background:rgba(255,255,255,.18);
+border-radius:100px;
+filter:blur(3px);
+}
+
+.cloud::before,
+.cloud::after{
+content:"";
+position:absolute;
+background:inherit;
+border-radius:50%;
+}
+
+.cloud::before{
+width:80px;
+height:80px;
+left:20px;
+top:-25px;
+}
+
+.cloud::after{
+width:110px;
+height:110px;
+right:25px;
+top:-40px;
+}
+
+.c1{
+width:240px;
+height:70px;
+top:60px;
+left:-260px;
+animation:cloudMove 40s linear infinite;
+}
+
+.c2{
+width:320px;
+height:90px;
+top:180px;
+left:-350px;
+animation:cloudMove 60s linear infinite;
+}
+
+.c3{
+width:200px;
+height:60px;
+top:320px;
+left:-220px;
+animation:cloudMove 50s linear infinite;
+}
+
+@keyframes cloudMove{
+to{
+transform:translateX(180vw);
+}
+}
+
+/* Fog */
+.fog-layer{
+position:absolute;
+width:200%;
+height:45%;
+background:rgba(255,255,255,.12);
+filter:blur(40px);
+animation:fogMove 30s linear infinite;
+}
+
+.second{
+top:40%;
+animation-duration:40s;
+animation-direction:reverse;
+}
+
+@keyframes fogMove{
+from{transform:translateX(-40%);}
+to{transform:translateX(0);}
+}
+
+/* Lightning */
+.lightning{
+animation:flash 8s infinite;
+box-shadow:0 0 180px rgba(255,255,255,.8);
+}
+
+@keyframes flash{
+0%,92%,100%{
+opacity:0;
+}
+93%{
+opacity:.4;
+}
+94%{
+opacity:0;
+}
+95%{
+opacity:1;
+}
+96%{
+opacity:.2;
+}
+97%{
+opacity:.8;
+}
+98%{
+opacity:0;
+}
+}

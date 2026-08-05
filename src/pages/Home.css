@@ -1,0 +1,77 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+}
+
+/* Common Row */
+.dashboard-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Row 1 */
+.weather-card-wrapper {
+  flex: 2;
+}
+
+.air-quality-wrapper {
+  flex: 1;
+}
+
+/* Row 2 */
+.hourly-wrapper {
+  flex: 2;
+}
+
+.highlight-wrapper {
+  flex: 1;
+}
+
+/* Row 3 */
+.daily-wrapper {
+  flex: 2;
+}
+
+.sunrise-wrapper {
+  flex: 1;
+}
+
+/* Row 4 */
+.chart-wrapper {
+  flex: 2;
+}
+
+.map-wrapper {
+  flex: 1;
+}
+
+/* Make children fill available space */
+.dashboard-row > div {
+  display: flex;
+}
+
+.dashboard-row > div > * {
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .dashboard-row {
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 15px;
+    gap: 16px;
+  }
+
+  .dashboard-row {
+    gap: 16px;
+  }
+}

@@ -1,0 +1,25 @@
+.weather-background-icon{
+  position: fixed;
+  top: 50%;
+  right: -80px;
+  transform: translateY(-50%);
+  z-index: -1;
+  opacity: .12;
+  pointer-events: none;
+}
+
+.weather-background-icon img{
+  width: 420px;
+  height: 420px;
+  object-fit: contain;
+  animation: floatIcon 8s ease-in-out infinite;
+}
+
+@keyframes floatIcon{
+  0%,100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+}

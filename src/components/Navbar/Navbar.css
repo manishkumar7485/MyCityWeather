@@ -1,0 +1,105 @@
+.navbar{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+height:72px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 24px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.25);
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:700;
+
+color:var(--primary);
+
+}
+
+.nav-left{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.nav-search{
+
+flex:1;
+
+padding:0 25px;
+
+}
+
+.nav-right{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.menu-btn{
+
+display:none;
+
+font-size:22px;
+
+}
+
+.current-city {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media(max-width:992px){
+
+.menu-btn{
+
+display:block;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.nav-search{
+
+padding:0 10px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+}
+}
